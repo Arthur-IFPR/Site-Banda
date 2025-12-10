@@ -22,10 +22,23 @@ header {
     z-index: 5;
 }
 
+
 nav {
     display: flex;
     justify-content: center;
     gap: 20%;
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    nav > p {
+        display: block;
+        margin: auto;
+    }
 }
 
 nav>p>a {
@@ -45,9 +58,16 @@ nav>p>a {
 */
 
 .section-1 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 1175px) {
+    .section-1 {
+        flex-direction: column;
+        gap: 100px;
+    }
 }
 
 .flex-center {
@@ -62,7 +82,13 @@ nav>p>a {
 .foto-da-banda {
     clip-path: polygon(50% 0%, 100% 0, 100% 30%, 24% 100%, 0 100%, 0 0);
     width: 700px;
+}
 
+@media (max-width:600px) {
+    .foto-da-banda {
+        clip-path: none;
+        margin: auto;
+    }
 }
 
 .foto-da-banda-ellipse {
@@ -73,6 +99,12 @@ nav>p>a {
     border-radius: 100%;
 
     transform: translate(525px, -50px);
+}
+
+@media (max-width: 1175px) {
+    .foto-da-banda-ellipse {
+        display: none;
+    }
 }
 
 .hero-text {
@@ -100,8 +132,9 @@ nav>p>a {
     line-height: 3rem;
 }
 
+
 .section-2 {
-    margin-top: 600px;
+    margin-top: 300px;
     display: flex;
     justify-content: center;
 }
@@ -146,6 +179,14 @@ nav>p>a {
     gap: 1rem;
 }
 
+@media (max-width: 600px) {
+    .video-show-text {
+        width: 250px;
+        height: 400px;
+        bottom: 500px;
+    }
+}
+
 .video-show-text>h1 {
     text-align: center;
     font-weight: 100;
@@ -174,21 +215,27 @@ nav>p>a {
 .section-3-wrapper {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 20rem;
-
 }
 
 .musica-letra {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    position: relative;
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
     max-width: min-content;
     padding: 5rem;
     border-radius: 15px;
     overflow-y: auto;
     height: 600px;
+    margin: auto;
+}
+
+@media (max-width:600px) {
+    .musica-letra {
+        align-items: center;
+    }
 }
 
 .musica-letra>h1 {
@@ -218,15 +265,6 @@ nav>p>a {
     height: 168px;
 }
 
-.musicDummy-1 {
-}
-
-.musicDummy-2 {
-}
-
-.music-dummy-3 {
-}
-
 .mainMusicDummy {
     width: 560px;
     height: 315px;
@@ -254,7 +292,6 @@ nav>p>a {
     display: flex;
     gap: 600px;
     position: relative;
-    bottom: 275px;
     cursor: pointer;
 }
 
@@ -269,6 +306,19 @@ nav>p>a {
     width: min-content;
     height: min-content;
     box-shadow: none;
+}
+
+@media (max-width: 1275px) {
+    .setas {
+        top: 270px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .setas {
+        gap: 30px;
+    }
 }
 
 .section-4 {
@@ -288,6 +338,22 @@ nav>p>a {
     justify-content: center;
     margin-top: 5rem;
     gap: 300px;
+}
+
+@media (max-width:1400px) {
+    .historia-wrapper {
+        gap: 10vw;
+    }
+}
+
+@media (max-width:1000px) {
+    .historia-wrapper {
+        flex-direction: column;
+    }
+
+    .image-2 {
+        order: -1;
+    }
 }
 
 .historia-wrapper>div {
